@@ -1,6 +1,9 @@
-I = imread('images/Lenna.png');
-depht = 10;
-[xmax,ymax] = size(I);
+I = imread('images/test2.png');
+depht = 30;
+ymax = size(I,1);
+xmax = size(I,2);
+ disp(ymax);
+ disp(xmax);
 crop_rect_left = [depht,0,xmax-depht-1,ymax];
 crop_rect_right = [0,0,xmax-depht,ymax];
 
@@ -9,6 +12,9 @@ right_pic = imcrop(I,crop_rect_right);
 %  subplot(1,2,1), imshow(left_pic);
 %  subplot(1,2,2), imshow(right_pic);
 %J = Anaglyph3D(left_pic,right_pic);
+ disp(crop_rect_left);
+ disp(crop_rect_right);
+ 
  disp(size(left_pic));
  disp(size(right_pic));
 
